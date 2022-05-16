@@ -1,0 +1,38 @@
+.new-expense {
+  border: 2px solid #c9e3c8;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(187, 248, 189, 0.25);
+}
+
+.new-expense button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #b7dfb7;
+  background-color: #b0d8ad;
+  color: black;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.new-expense button:hover,
+.new-expense button:active {
+  background-color: #b3edaf;
+  border-color: #b3edaf;
+}
+
+.new-expense button.alternative {
+  color: #b0d8ad;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.new-expense button.alternative:hover,
+.new-expense button.alternative:active {
+  background-color: #c4f0c0;
+}
