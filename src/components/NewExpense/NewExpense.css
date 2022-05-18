@@ -1,20 +1,21 @@
 .new-expense {
-  border: 2px solid #c9e3c8;
+  border: 1px solid #d7fad7;
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;
   max-width: 95%;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 1px 8px rgba(187, 248, 189, 0.25);
+  box-shadow: 0 1px 4px #e3fae3;
+  background-color: #f3fef3;
 }
 
 .new-expense button {
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
-  border: 1px solid #b7dfb7;
-  background-color: #b0d8ad;
+  border: 1px solid #c8f0c5;
+  background-color: #c3e9c0;
   color: black;
   border-radius: 12px;
   margin-right: 1rem;
