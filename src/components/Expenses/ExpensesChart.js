@@ -8,6 +8,12 @@ const ExpensesChart = (props) => {
     { label: "Apr", value: 0 },
     { label: "May", value: 0 },
     { label: "Jun", value: 0 },
+    { label: "Jul", value: 0 },
+    { label: "Aug", value: 0 },
+    { label: "Sep", value: 0 },
+    { label: "Oct", value: 0 },
+    { label: "Nov", value: 0 },
+    { label: "Dec", value: 0 },
   ];
 
   //create 'for' loop:
@@ -18,6 +24,6 @@ const ExpensesChart = (props) => {
   //above: we increase the value of the month by expense amount.
   //after the looping the values in chartDataPoints, are no longer'0' but will be updated with expense amount.
 
-  return <Chart item={chartDataPoints} />;
+  return <Chart items={chartDataPoints} />;
 };
 export default ExpensesChart;
