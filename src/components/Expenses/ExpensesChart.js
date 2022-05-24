@@ -18,9 +18,11 @@ const ExpensesChart = (props) => {
 
   //create 'for' loop:
   for (const expense of props.expenses) {
-    const expenseMonth = expense.date.getMonth();
-    chartDataPoints[expenseMonth].value += expense.amount;
+    const convertedDate = new Date(expense.date);
+    const expenseMonth = convertedDate.getMonth();
+    chartDataPoints[expenseMonth].value += parseInt(expense.amount);
   }
+  console.log("chartData:", chartDataPoints);
   //above: we increase the value of the month by expense amount.
   //after the looping the values in chartDataPoints, are no longer'0' but will be updated with expense amount.
 
