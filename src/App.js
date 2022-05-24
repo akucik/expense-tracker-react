@@ -48,7 +48,7 @@ function App() {
   }, []);
   useEffect(() => {
     fetchExpenses();
-  }, [fetchExpenses]);
+  }, [fetchExpenses, expenses]);
 
   async function addExpenseHandler(expense) {
     const response = await fetch(
