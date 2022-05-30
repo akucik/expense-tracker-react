@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import "./Expenses.css";
 
 import ExpenseFilter from "./ExpenseFilter";
@@ -11,9 +11,26 @@ const Expenses = (props) => {
     setFilteredYear(selectedYear);
   };
 
-  console.log("props.items:", props.items);
+  const expenseItems = useMemo(() => {
+    if (!props.items) {
+      return [];
+    }
+    const loadedExpenses = [];
+    for (const key in props.items) {
+      loadedExpenses.push({
+        id: key,
+        title: props.items[key].title,
+        amount: props.items[key].amount,
+        date: props.items[key].date,
+      });
+    }
+    loadedExpenses.sort((a, b) => {
+      return new Date(a.date) > new Date(b.date) ? -1 : 1;
+    });
+    return loadedExpenses;
+  }, [props.items]);
 
-  const filteredExpenses = props.items.filter((item) => {
+  const filteredExpenses = expenseItems.filter((item) => {
     const convertedDate = new Date(item.date);
     console.log(
       "convertedDate:",
